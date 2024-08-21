@@ -16,20 +16,20 @@ abstract class AppTextStyle {
   }
 
   //Bold
-  static TextStyle bold20() {
-    return const TextStyle(
+  static TextStyle bold20({double? fontSize}) {
+    return TextStyle(
       fontFamily: nunitoFont,
-      fontSize: FontSizeManager.s20,
+      fontSize: fontSize ?? FontSizeManager.s20,
       fontWeight: FontWeightManager.bold,
       color: AppColors.black,
     );
   }
 
   //SemiBold
-  TextStyle semiBold16() {
-    return const TextStyle(
+  static TextStyle nunitoSemiBold16({double? fontSize}) {
+    return TextStyle(
       fontFamily: nunitoFont,
-      fontSize: FontSizeManager.s16,
+      fontSize: fontSize ?? FontSizeManager.s16,
       color: AppColors.black,
     );
   }
@@ -45,10 +45,10 @@ abstract class AppTextStyle {
   }
 
   //Manrope
-  TextStyle manropeMedium10() {
-    return const TextStyle(
+  static TextStyle manropeMedium10({double? fontSize}) {
+    return TextStyle(
         fontFamily: manropeFont,
-        fontSize: FontSizeManager.s10,
+        fontSize: fontSize ?? FontSizeManager.s10,
         color: AppColors.secondary);
   }
 }

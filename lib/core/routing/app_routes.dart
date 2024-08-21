@@ -1,5 +1,12 @@
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+import 'package:test/core/common/screens/main_screen/bloc/main_cubit/main_cubit.dart';
+import 'package:test/core/common/screens/main_screen/screens/main_screen.dart';
 import 'package:test/features/home/presentation/screens/home_screen.dart';
+import 'package:test/features/post/presentation/bloc/posts_cubit/posts_cubit.dart';
+import 'package:test/features/post/presentation/screens/create_post_screen.dart';
+
+import '../../injection_container.dart';
 
 enum Routes {
   home,
@@ -12,8 +19,25 @@ enum Routes {
 }
 
 final goRouter = GoRouter(
+  initialLocation: '/',
   routes: [
     ShellRoute(
+      builder: (context, state, child) {
+        return MultiBlocProvider(
+          providers: [
+            BlocProvider(
+              create: (context) => sl<MainCubit>(),
+            ),
+            BlocProvider(
+              create: (context) => sl<PostsCubit>(),
+            ),
+          ],
+          child: BlocProvider(
+            create: (context) => sl<MainCubit>(),
+            child: MainScreen(child: child),
+          ),
+        );
+      },
       routes: [
         GoRoute(
           path: '/',
@@ -40,20 +64,8 @@ final goRouter = GoRouter(
           },
         ),
         GoRoute(
-          path: '/createPost',
-          name: Routes.createPost.name,
-          pageBuilder: (context, state) {
-            return CustomTransitionPage(
-              child: const HomeScreen(),
-              transitionsBuilder: (context, animation1, animation2, child) {
-                return child;
-              },
-            );
-          },
-        ),
-        GoRoute(
           path: '/profile',
-          name: Routes.home.name,
+          name: Routes.profile.name,
           pageBuilder: (context, state) {
             return CustomTransitionPage(
               child: const HomeScreen(),
@@ -67,10 +79,10 @@ final goRouter = GoRouter(
     ),
     GoRoute(
       path: '/postDetails',
-      name: Routes.postDetails.name,
+      name: Routes.createPost.name,
       pageBuilder: (context, state) {
         return CustomTransitionPage(
-          child: const HomeScreen(),
+          child: const CreatePostScreen(),
           transitionsBuilder: (context, animation1, animation2, child) {
             return child;
           },
@@ -79,7 +91,7 @@ final goRouter = GoRouter(
     ),
     GoRoute(
         path: '/chatPreview/:userId',
-        name: Routes.postDetails.name,
+        name: Routes.chatPreview.name,
         pageBuilder: (context, state) {
           return CustomTransitionPage(
             child: const HomeScreen(),

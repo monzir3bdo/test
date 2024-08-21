@@ -2,6 +2,7 @@
 class Assets {
   Assets._();
 
+  static const String imagesJames = 'assets/images/james.jpeg';
   static const String manropeManropeMedium =
       'assets/fonts/manrope/Manrope-Medium.ttf';
   static const String nunitoNunitoBold = 'assets/fonts/nunito/Nunito-Bold.ttf';
@@ -22,12 +23,16 @@ class Assets {
   static const String svgGallery = 'assets/svg/gallery.svg';
   static const String svgGalleryAdd = 'assets/svg/galleryAdd.svg';
   static const String svgHeart = 'assets/svg/heart.svg';
+  static const String svgHeartIcon = 'assets/svg/heartIcon.svg';
   static const String svgHomeIcon = 'assets/svg/homeIcon.svg';
   static const String svgLeftArrow = 'assets/svg/leftArrow.svg';
   static const String svgMessage = 'assets/svg/message.svg';
+  static const String svgPostCommentIcon = 'assets/svg/postCommentIcon.svg';
   static const String svgProfileIcon = 'assets/svg/profileIcon.svg';
   static const String svgSearch = 'assets/svg/search.svg';
   static const String svgSend = 'assets/svg/send.svg';
+  static const String svgSendPostIcon = 'assets/svg/sendPostIcon.svg';
   static const String svgSettingsIcon = 'assets/svg/settingsIcon.svg';
+  static const String svgTopicIcon = 'assets/svg/topicIcon.svg';
   static const String svgVerify = 'assets/svg/verify.svg';
 }
