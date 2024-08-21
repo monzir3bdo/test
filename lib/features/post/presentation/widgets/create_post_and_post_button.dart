@@ -15,7 +15,6 @@ class CreatePostAndPostButton extends StatelessWidget {
         padding: EdgeInsets.only(
           left: 16.w,
           right: 16.w,
-          top: 24.h,
         ),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -23,7 +22,7 @@ class CreatePostAndPostButton extends StatelessWidget {
             const BackButton(),
             Text(
               'Create Post'.hardCoded,
-              style: AppTextStyle.bold20(
+              style: AppTextStyle.nunitoBold20(
                 fontSize: FontSizeManager.s16,
               ),
             ),

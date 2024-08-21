@@ -2,7 +2,10 @@
 class Assets {
   Assets._();
 
+  static const String imagesCharacter1 = 'assets/images/character1.jpeg';
+  static const String imagesCharacter2 = 'assets/images/character2.jpeg';
   static const String imagesJames = 'assets/images/james.jpeg';
+  static const String imagesTree = 'assets/images/tree.png';
   static const String manropeManropeMedium =
       'assets/fonts/manrope/Manrope-Medium.ttf';
   static const String nunitoNunitoBold = 'assets/fonts/nunito/Nunito-Bold.ttf';
@@ -15,6 +18,7 @@ class Assets {
   static const String nunitoNunitoSemiBold =
       'assets/fonts/nunito/Nunito-SemiBold.ttf';
   static const String svgAdd = 'assets/svg/add.svg';
+  static const String svgAddMessageButton = 'assets/svg/add_message_button.svg';
   static const String svgBell = 'assets/svg/bell.svg';
   static const String svgBookmark = 'assets/svg/bookmark.svg';
   static const String svgCamera = 'assets/svg/camera.svg';
@@ -35,4 +39,5 @@ class Assets {
   static const String svgSettingsIcon = 'assets/svg/settingsIcon.svg';
   static const String svgTopicIcon = 'assets/svg/topicIcon.svg';
   static const String svgVerify = 'assets/svg/verify.svg';
+  static const String svgX = 'assets/svg/x.svg';
 }

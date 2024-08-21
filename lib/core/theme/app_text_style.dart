@@ -16,7 +16,7 @@ abstract class AppTextStyle {
   }
 
   //Bold
-  static TextStyle bold20({double? fontSize}) {
+  static TextStyle nunitoBold20({double? fontSize}) {
     return TextStyle(
       fontFamily: nunitoFont,
       fontSize: fontSize ?? FontSizeManager.s20,
@@ -36,10 +36,10 @@ abstract class AppTextStyle {
 
   //regular14
   static TextStyle nunitoRegular14() {
-    return const TextStyle(
+    return TextStyle(
       fontFamily: nunitoFont,
       fontWeight: FontWeightManager.medium,
-      color: Colors.black,
+      color: AppColors.black,
       fontSize: FontSizeManager.s14,
     );
   }

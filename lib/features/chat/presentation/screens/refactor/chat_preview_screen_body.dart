@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:gap/gap.dart';
 import 'package:test/features/chat/presentation/widgets/chat_preview/long_message_widget.dart';
-import 'package:test/features/chat/presentation/widgets/chat_preview/sender_name_and_settings_widget.dart';
 import 'package:test/features/chat/presentation/widgets/chat_preview/short_message.dart';
 
 class ChatPreviewScreenBody extends StatelessWidget {
@@ -8,15 +9,23 @@ class ChatPreviewScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CustomScrollView(
-      slivers: [
-        SenderNameAndSettingsWidget(),
-        SliverToBoxAdapter(
-          child: LongMessageWidget(),
+    return ListView(
+      reverse: true,
+      children: [
+        Gap(100.w),
+        const ShortMessage(),
+        Gap(16.w),
+        const LongMessageWidget(),
+        Gap(16.w),
+        const Center(child: Text('Today')),
+        Gap(16.w),
+        const ShortMessage(
+          reverse: true,
         ),
-        SliverToBoxAdapter(
-          child: ShortMessage(),
-        )
+        Gap(16.w),
+        const ShortMessage(),
+        Gap(16.w),
+        const ShortMessage(),
       ],
     );
   }

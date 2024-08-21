@@ -13,17 +13,15 @@ class ChooseTopicItemWidget extends StatelessWidget {
     required this.isSelected,
     required this.topicName,
     required this.onTap,
-    required this.onDoubleTap,
   });
   final bool isSelected;
   final String topicName;
   final VoidCallback onTap;
-  final VoidCallback onDoubleTap;
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
-      onDoubleTap: onDoubleTap,
       child: AnimatedContainer(
         padding: EdgeInsets.symmetric(horizontal: 15.h, vertical: 15.w),
         width: 343.w,

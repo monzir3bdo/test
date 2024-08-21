@@ -25,7 +25,7 @@ class PostButton extends StatelessWidget {
         child: Center(
           child: Text(
             'Post'.hardCoded,
-            style: AppTextStyle.bold20().copyWith(
+            style: AppTextStyle.nunitoBold20().copyWith(
               fontSize: FontSizeManager.s16,
               color: AppColors.white,
             ),

@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:test/features/post/presentation/bloc/image/image_cubit.dart';
 
 import '../../../../generated/assets.dart';
 
@@ -10,7 +12,9 @@ class RemoveImageButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return IconButton(
-      onPressed: () {},
+      onPressed: () {
+        context.read<ImageCubit>().removeImage();
+      },
       icon: SvgPicture.asset(
         Assets.svgX,
         width: 18.w,

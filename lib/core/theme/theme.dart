@@ -4,9 +4,9 @@ import 'package:test/core/theme/app_text_style.dart';
 
 ThemeData lightTheme = ThemeData(
     colorScheme: ColorScheme.fromSeed(
-      seedColor: AppColors.primary,
-      secondary: AppColors.secondary,
-    ),
+        seedColor: AppColors.primary,
+        secondary: AppColors.secondary,
+        surface: AppColors.white),
     tabBarTheme: TabBarTheme(
       indicatorSize: TabBarIndicatorSize.tab,
       indicatorColor: AppColors.primary,
