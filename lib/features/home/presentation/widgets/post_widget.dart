@@ -17,12 +17,7 @@ class PostWidget extends StatelessWidget {
       decoration: BoxDecoration(
         color: AppColors.light,
         borderRadius: BorderRadius.circular(20),
-        boxShadow: [
-          BoxShadow(
-            color: AppColors.black.withOpacity(0.2),
-            spreadRadius: 0.4,
-          )
-        ],
+
       ),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,

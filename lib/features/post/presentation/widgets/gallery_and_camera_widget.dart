@@ -13,7 +13,7 @@ class GalleryAndCameraWidget extends StatelessWidget {
         top: 23.h,
         left: 17.w,
         right: 17.w,
-        bottom: MediaQuery.of(context).viewInsets.bottom,
+
       ),
       child: const Row(
         children: [

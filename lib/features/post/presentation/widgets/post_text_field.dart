@@ -9,20 +9,21 @@ class PostTextField extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 16.w),
-        child: SizedBox(
-          height: 141.h,
-          child: TextField(
-            maxLines: 5,
-            decoration: InputDecoration(
-              hintText: 'Type something'.hardCoded,
-              hintStyle: AppTextStyle.nunitoRegular14().copyWith(
-                color: AppColors.black,
-              ),
-              border: InputBorder.none,
+    return Padding(
+      padding: EdgeInsets.symmetric(horizontal: 16.h, vertical: 16.w),
+      child: SizedBox(
+        height: 141.h,
+        child: TextField(
+          onTapOutside: (pointer){
+            FocusManager.instance.primaryFocus?.unfocus();
+          },
+          maxLines: 5,
+          decoration: InputDecoration(
+            hintText: 'Type something'.hardCoded,
+            hintStyle: AppTextStyle.nunitoRegular14().copyWith(
+              color: AppColors.black,
             ),
+            border: InputBorder.none,
           ),
         ),
       ),

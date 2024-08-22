@@ -12,10 +12,8 @@ class DynamicDistance extends StatelessWidget {
   Widget build(BuildContext context) {
     return BlocBuilder<ImageCubit, ImageState>(
       builder: (context, state) {
-        return SliverToBoxAdapter(
-          child: Gap(
-            context.read<ImageCubit>().selectedImage.isEmpty ? 373.h : 285.h,
-          ),
+        return Gap(
+          context.read<ImageCubit>().selectedImage.isEmpty ? 373.h : 285.h,
         );
       },
     );

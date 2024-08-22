@@ -8,13 +8,11 @@ class TopicTitleWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: Padding(
-        padding: EdgeInsets.only(left: 16.w, bottom: 6.h),
-        child: Text(
-          'Topic'.hardCoded,
-          style: AppTextStyle.nunitoRegular14(),
-        ),
+    return Padding(
+      padding: EdgeInsets.only(left: 16.w, bottom: 6.h),
+      child: Text(
+        'Topic'.hardCoded,
+        style: AppTextStyle.nunitoRegular14(),
       ),
     );
   }

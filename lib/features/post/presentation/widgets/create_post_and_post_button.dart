@@ -10,25 +10,23 @@ class CreatePostAndPostButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: Padding(
-        padding: EdgeInsets.only(
-          left: 16.w,
-          right: 16.w,
-        ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            const BackButton(),
-            Text(
-              'Create Post'.hardCoded,
-              style: AppTextStyle.nunitoBold20(
-                fontSize: FontSizeManager.s16,
-              ),
+    return Padding(
+      padding: EdgeInsets.only(
+        left: 16.w,
+        right: 16.w,
+      ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          const BackButton(),
+          Text(
+            'Create Post'.hardCoded,
+            style: AppTextStyle.nunitoBold20(
+              fontSize: FontSizeManager.s16,
             ),
-            const PostButton()
-          ],
-        ),
+          ),
+          const PostButton()
+        ],
       ),
     );
   }

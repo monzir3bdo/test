@@ -11,41 +11,39 @@ class ChoosePostTypeWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: BlocBuilder<CreatePostCubit, CreatePostState>(
-        builder: (context, state) {
-          return Padding(
-            padding: EdgeInsets.only(
-              top: 15.h,
-              left: 16.w,
-              right: 16.w,
-            ),
-            child: Row(
-              children: [
-                PostTypeWidget(
-                  isSelected:
-                      context.read<CreatePostCubit>().selectedPostType ==
-                          'Public',
-                  onTap: () {
-                    context.read<CreatePostCubit>().changePostType('Public');
-                  },
-                  name: 'Public'.hardCoded,
-                ),
-                Gap(16.w),
-                PostTypeWidget(
-                  onTap: () {
-                    context.read<CreatePostCubit>().changePostType('Business');
-                  },
-                  isSelected:
-                      context.read<CreatePostCubit>().selectedPostType ==
-                          'Business',
-                  name: 'Business'.hardCoded,
-                ),
-              ],
-            ),
-          );
-        },
-      ),
+    return BlocBuilder<CreatePostCubit, CreatePostState>(
+      builder: (context, state) {
+        return Padding(
+          padding: EdgeInsets.only(
+            top: 15.h,
+            left: 16.w,
+            right: 16.w,
+          ),
+          child: Row(
+            children: [
+              PostTypeWidget(
+                isSelected:
+                    context.read<CreatePostCubit>().selectedPostType ==
+                        'Public',
+                onTap: () {
+                  context.read<CreatePostCubit>().changePostType('Public');
+                },
+                name: 'Public'.hardCoded,
+              ),
+              Gap(16.w),
+              PostTypeWidget(
+                onTap: () {
+                  context.read<CreatePostCubit>().changePostType('Business');
+                },
+                isSelected:
+                    context.read<CreatePostCubit>().selectedPostType ==
+                        'Business',
+                name: 'Business'.hardCoded,
+              ),
+            ],
+          ),
+        );
+      },
     );
   }
 }

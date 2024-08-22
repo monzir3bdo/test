@@ -14,16 +14,13 @@ class CreatePostScreenBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const CustomScrollView(
-      slivers: [
+    return  ListView(
+      children: [
         CreatePostAndPostButton(),
         ChoosePostTypeWidget(),
         PostTextField(),
         DynamicDistance(),
-        TopicTitleWidget(),
-        CreatePostTopicWidget(),
-        TakeImageWidgetOrDisplayImageWidget(),
-        SliverGap(8)
+
       ],
     );
   }

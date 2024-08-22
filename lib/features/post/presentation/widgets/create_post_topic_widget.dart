@@ -10,52 +10,50 @@ class CreatePostTopicWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SliverToBoxAdapter(
-      child: SizedBox(
-        height: 35,
-        child: Padding(
-          padding: const EdgeInsets.only(left: 17.0),
-          child: BlocBuilder<CreatePostCubit, CreatePostState>(
-            builder: (context, state) {
-              return ListView(
-                scrollDirection: Axis.horizontal,
-                children: [
-                  CreatePostTopicItemWidget(
-                    topicName: 'Climate change & sustainability',
-                    isSelected: context.read<CreatePostCubit>().postTopic ==
-                        'Climate change & sustainability',
-                    onTap: () {
-                      context
-                          .read<CreatePostCubit>()
-                          .changePostTopic('Climate change & sustainability');
-                    },
-                  ),
-                  Gap(12.w),
-                  CreatePostTopicItemWidget(
-                    topicName: 'Conscious Art',
-                    isSelected: context.read<CreatePostCubit>().postTopic ==
-                        'Conscious Art',
-                    onTap: () {
-                      context
-                          .read<CreatePostCubit>()
-                          .changePostTopic('Conscious Art');
-                    },
-                  ),
-                  Gap(12.w),
-                  CreatePostTopicItemWidget(
-                    topicName: 'Another Topic',
-                    isSelected: context.read<CreatePostCubit>().postTopic ==
-                        'Another Topic',
-                    onTap: () {
-                      context
-                          .read<CreatePostCubit>()
-                          .changePostTopic('Another Topic');
-                    },
-                  ),
-                ],
-              );
-            },
-          ),
+    return SizedBox(
+      height: 35,
+      child: Padding(
+        padding: const EdgeInsets.only(left: 17.0),
+        child: BlocBuilder<CreatePostCubit, CreatePostState>(
+          builder: (context, state) {
+            return ListView(
+              scrollDirection: Axis.horizontal,
+              children: [
+                CreatePostTopicItemWidget(
+                  topicName: 'Climate change & sustainability',
+                  isSelected: context.read<CreatePostCubit>().postTopic ==
+                      'Climate change & sustainability',
+                  onTap: () {
+                    context
+                        .read<CreatePostCubit>()
+                        .changePostTopic('Climate change & sustainability');
+                  },
+                ),
+                Gap(12.w),
+                CreatePostTopicItemWidget(
+                  topicName: 'Conscious Art',
+                  isSelected: context.read<CreatePostCubit>().postTopic ==
+                      'Conscious Art',
+                  onTap: () {
+                    context
+                        .read<CreatePostCubit>()
+                        .changePostTopic('Conscious Art');
+                  },
+                ),
+                Gap(12.w),
+                CreatePostTopicItemWidget(
+                  topicName: 'Another Topic',
+                  isSelected: context.read<CreatePostCubit>().postTopic ==
+                      'Another Topic',
+                  onTap: () {
+                    context
+                        .read<CreatePostCubit>()
+                        .changePostTopic('Another Topic');
+                  },
+                ),
+              ],
+            );
+          },
         ),
       ),
     );
