@@ -13,9 +13,14 @@ class TakeImageWidgetOrDisplayImageWidget extends StatelessWidget {
     return SliverToBoxAdapter(
       child: BlocBuilder<ImageCubit, ImageState>(
         builder: (context, state) {
-          return context.read<ImageCubit>().selectedImage.isEmpty
-              ? const GalleryAndCameraWidget()
-              : const DisplayPickedImageWidget();
+          return Padding(
+            padding: EdgeInsets.only(
+              bottom: MediaQuery.of(context).viewInsets.bottom,
+            ),
+            child: context.read<ImageCubit>().selectedImage.isEmpty
+                ? const GalleryAndCameraWidget()
+                : const DisplayPickedImageWidget(),
+          );
           ;
         },
       ),
