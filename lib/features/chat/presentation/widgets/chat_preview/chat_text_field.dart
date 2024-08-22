@@ -8,6 +8,9 @@ class ChatTextField extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
+      onTapOutside: (pointer) {
+        FocusScope.of(context).unfocus();
+      },
       decoration: InputDecoration(
         hintText: 'Type something'.hardCoded,
         hintStyle: AppTextStyle.nunitoRegular14(),

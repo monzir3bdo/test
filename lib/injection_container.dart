@@ -24,7 +24,7 @@ Future<void> initMain() async {
 //posts
 Future<void> initPosts() async {
   sl
-    ..registerSingleton(PostsCubit())
+    ..registerFactory(() => PostsCubit())
     ..registerFactory(() => CreatePostCubit())
     ..registerSingleton(ImagePickerService())
     ..registerFactory(() => ImageCubit(sl()));

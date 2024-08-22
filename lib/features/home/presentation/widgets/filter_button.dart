@@ -17,11 +17,13 @@ class FilterButton extends StatelessWidget {
       onPressed: () {
         showModalBottomSheet(
           showDragHandle: true,
+          useSafeArea: true,
           backgroundColor: AppColors.white,
           context: context,
+          isScrollControlled: true,
           builder: (context) {
-            return BlocProvider.value(
-              value: sl<PostsCubit>(),
+            return BlocProvider(
+              create: (context) => sl<PostsCubit>(),
               child: const ChoosePostTopicWidget(),
             );
           },

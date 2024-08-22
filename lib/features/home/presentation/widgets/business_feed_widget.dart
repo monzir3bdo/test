@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:test/features/home/presentation/widgets/post_widget.dart';
 
 import 'feeds_and_filter_widget.dart';
@@ -17,6 +18,7 @@ class BusinessFeeWidget extends StatelessWidget {
           PostWidget(
             isContainImage: true,
           ),
+          Gap(50),
         ],
       ),
     );

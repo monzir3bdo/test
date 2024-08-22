@@ -14,7 +14,7 @@ class HomeScreen extends StatelessWidget {
         SliverGap(20.h),
         //Notifications and logo icon
         const NotificationsWidget(),
-        SliverGap(20.h),
+        SliverGap(14.h),
         const PublicAndBusinessFeedWidget(),
         //
       ],

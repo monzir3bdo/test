@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 import 'package:test/core/common/screens/main_screen/bloc/main_cubit/main_cubit.dart';
@@ -6,7 +7,6 @@ import 'package:test/features/chat/presentation/screens/chat_screen.dart';
 import 'package:test/features/home/presentation/screens/home_screen.dart';
 import 'package:test/features/post/presentation/bloc/create_post/create_post_cubit.dart';
 import 'package:test/features/post/presentation/bloc/image/image_cubit.dart';
-import 'package:test/features/post/presentation/bloc/posts_cubit/posts_cubit.dart';
 import 'package:test/features/post/presentation/screens/create_post_screen.dart';
 
 import '../../features/chat/presentation/screens/chat_preview_screen.dart';
@@ -27,19 +27,9 @@ final goRouter = GoRouter(
   routes: [
     ShellRoute(
       builder: (context, state, child) {
-        return MultiBlocProvider(
-          providers: [
-            BlocProvider(
-              create: (context) => sl<MainCubit>(),
-            ),
-            BlocProvider(
-              create: (context) => sl<PostsCubit>(),
-            ),
-          ],
-          child: BlocProvider(
-            create: (context) => sl<MainCubit>(),
-            child: MainScreen(child: child),
-          ),
+        return BlocProvider(
+          create: (context) => sl<MainCubit>(),
+          child: MainScreen(child: child),
         );
       },
       routes: [
@@ -50,7 +40,10 @@ final goRouter = GoRouter(
             return CustomTransitionPage(
               child: const HomeScreen(),
               transitionsBuilder: (context, animation1, animation2, child) {
-                return child;
+                return ScaleTransition(
+                  scale: animation1,
+                  child: child,
+                );
               },
             );
           },
@@ -74,7 +67,7 @@ final goRouter = GoRouter(
             return CustomTransitionPage(
               child: const HomeScreen(),
               transitionsBuilder: (context, animation1, animation2, child) {
-                return child;
+                return ScaleTransition(scale: animation1, child: child);
               },
             );
           },
@@ -86,7 +79,7 @@ final goRouter = GoRouter(
             return CustomTransitionPage(
               child: const ChatScreen(),
               transitionsBuilder: (context, animation1, animation2, child) {
-                return child;
+                return ScaleTransition(scale: animation1, child: child);
               },
             );
           },

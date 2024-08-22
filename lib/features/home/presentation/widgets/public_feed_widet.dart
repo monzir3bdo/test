@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:gap/gap.dart';
 import 'package:test/features/home/presentation/widgets/feeds_and_filter_widget.dart';
 import 'package:test/features/home/presentation/widgets/post_widget.dart';
 
@@ -17,7 +18,8 @@ class PublicFeedWidget extends StatelessWidget {
           PostWidget(
             isContainImage: true,
           ),
-          PostWidget()
+          PostWidget(),
+          Gap(50),
         ],
       ),
     );

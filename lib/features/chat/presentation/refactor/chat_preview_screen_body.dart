@@ -3,6 +3,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
 import 'package:test/features/chat/presentation/widgets/chat_preview/long_message_widget.dart';
 import 'package:test/features/chat/presentation/widgets/chat_preview/short_message.dart';
+import 'package:test/features/chat/presentation/widgets/chat_preview/today_widget.dart';
 
 class ChatPreviewScreenBody extends StatelessWidget {
   const ChatPreviewScreenBody({super.key});
@@ -17,7 +18,7 @@ class ChatPreviewScreenBody extends StatelessWidget {
         Gap(16.w),
         const LongMessageWidget(),
         Gap(16.w),
-        const Center(child: Text('Today')),
+        const TodayWidget(),
         Gap(16.w),
         const ShortMessage(
           reverse: true,

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:gap/gap.dart';
+import 'package:test/core/extensions/build_context_extensions.dart';
 import 'package:test/features/post/presentation/bloc/posts_cubit/posts_cubit.dart';
 import 'package:test/features/post/presentation/widgets/choose_topic_item_widget.dart';
 
@@ -11,9 +12,14 @@ class ChoosePostTopicWidget extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 304.h,
-      padding:
-          EdgeInsets.only(top: 37.h, left: 16.w, right: 16.w, bottom: 28.h),
+      height: context.screenHeight * 0.35,
+      width: context.screenWidth,
+      padding: EdgeInsets.only(
+        left: 16.w,
+        right: 16.w,
+        top: 10.h,
+        bottom: 28.h,
+      ),
       child: BlocBuilder<PostsCubit, PostsState>(
         builder: (_, state) {
           return ListView.separated(
@@ -26,7 +32,7 @@ class ChoosePostTopicWidget extends StatelessWidget {
                     context.read<PostsCubit>().selectTopic(index);
                   });
             },
-            separatorBuilder: (context, index) => Gap(8.h),
+            separatorBuilder: (context, index) => Gap(15.h),
           );
         },
       ),

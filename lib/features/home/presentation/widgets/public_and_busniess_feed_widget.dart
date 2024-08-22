@@ -27,7 +27,7 @@ class PublicAndBusinessFeedWidget extends StatelessWidget {
                 ],
               ),
               SizedBox(
-                height: context.screenHeight * 0.7,
+                height: context.screenHeight * 0.75,
                 child: const TabBarView(
                   children: [
                     PublicFeedWidget(),

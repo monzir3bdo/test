@@ -17,7 +17,7 @@ class ChatScreen extends StatelessWidget {
       slivers: [
         const MessageTitleAndNewButton(),
         SliverList.separated(
-          itemCount: 20,
+          itemCount: 7,
           itemBuilder: (context, index) {
             return ChatItemWidget(
               onTap: () {
@@ -32,7 +32,8 @@ class ChatScreen extends StatelessWidget {
           separatorBuilder: (context, index) {
             return Gap(12.h);
           },
-        )
+        ),
+        SliverGap(50),
       ],
     );
   }

@@ -12,8 +12,8 @@ class FeedsAndFilterWidget extends StatelessWidget {
       padding: EdgeInsets.only(
         left: 16.w,
         right: 16.w,
-        top: 18.h,
-        bottom: 15.h,
+        top: 15.h,
+        bottom: 12.h,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
