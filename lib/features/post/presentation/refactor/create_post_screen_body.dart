@@ -11,11 +11,11 @@ class CreatePostScreenBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      children: [
-        const CreatePostAndPostButton(),
-        const ChoosePostTypeWidget(),
-        const PostTextField(),
-        const DynamicDistance(),
+      children: const [
+        CreatePostAndPostButton(),
+        ChoosePostTypeWidget(),
+        PostTextField(),
+        DynamicDistance(),
       ],
     );
   }

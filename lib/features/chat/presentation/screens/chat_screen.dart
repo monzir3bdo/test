@@ -33,7 +33,7 @@ class ChatScreen extends StatelessWidget {
             return Gap(12.h);
           },
         ),
-        SliverGap(50),
+        const SliverGap(50),
       ],
     );
   }

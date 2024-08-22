@@ -23,9 +23,13 @@ class PostHeaderWidget extends StatelessWidget {
         ),
       ),
       title: Row(
-        children: [NameAndCheckMarkWidget(), Gap(3.w), PostCreatedAtWidget()],
+        children: [
+          const NameAndCheckMarkWidget(),
+          Gap(3.w),
+          const PostCreatedAtWidget(),
+        ],
       ),
-      subtitle: PostTopicNameWidget(),
+      subtitle: const PostTopicNameWidget(),
     );
   }
 }

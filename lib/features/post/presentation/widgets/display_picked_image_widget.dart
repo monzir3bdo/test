@@ -31,7 +31,7 @@ class DisplayPickedImageWidget extends StatelessWidget {
           Positioned(
             right: 2.w,
             top: 2.h,
-            child: RemoveImageButton(),
+            child: const RemoveImageButton(),
           ),
         ],
       ),

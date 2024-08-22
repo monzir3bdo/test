@@ -34,7 +34,7 @@ class ShortMessageText extends StatelessWidget {
             textAlign: TextAlign.start,
           ),
           Gap(5.h),
-          MessageTimeWidget(),
+          const MessageTimeWidget(),
         ],
       ),
     );

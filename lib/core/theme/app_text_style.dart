@@ -36,7 +36,7 @@ abstract class AppTextStyle {
 
   //regular14
   static TextStyle nunitoRegular14() {
-    return TextStyle(
+    return const TextStyle(
       fontFamily: nunitoFont,
       fontWeight: FontWeightManager.medium,
       color: AppColors.black,

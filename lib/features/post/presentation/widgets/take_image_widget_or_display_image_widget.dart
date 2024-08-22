@@ -15,7 +15,6 @@ class TakeImageWidgetOrDisplayImageWidget extends StatelessWidget {
         return context.read<ImageCubit>().selectedImage.isEmpty
             ? const GalleryAndCameraWidget()
             : const DisplayPickedImageWidget();
-        ;
       },
     );
   }

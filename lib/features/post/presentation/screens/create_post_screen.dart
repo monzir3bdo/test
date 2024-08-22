@@ -7,8 +7,8 @@ class CreatePostScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: const SafeArea(
+    return const Scaffold(
+      body: SafeArea(
         child: CreatePostScreenBody(),
       ),
       bottomSheet: CreatePostBottomSheetWidget(),
