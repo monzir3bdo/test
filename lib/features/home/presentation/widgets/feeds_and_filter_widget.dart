@@ -13,7 +13,6 @@ class FeedsAndFilterWidget extends StatelessWidget {
         left: 16.w,
         right: 16.w,
         top: 15.h,
-        bottom: 12.h,
       ),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
